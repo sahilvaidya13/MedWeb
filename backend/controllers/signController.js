@@ -6,54 +6,7 @@ const jwt = require("jsonwebtoken");
 const QRCode = require("qrcode");
 const JWT_SECRET = process.env.JWT_SECRET;
 
-// Schema for login
-// const Loginschema = Joi.object({
-//   email: Joi.string().email().required(),
-//   password: Joi.string().required(),
-// });
-// exports.Login = async (req, res) => {
-//   try {
-//     const inputData = req.body;
-//     const { error, value } = Loginschema.validate(inputData);
 
-//     if (error) {
-//       return res.status(422).send({ error: error.details[0].message });
-//     }
-
-//     await User.findOne({ email: value.email })
-//       .then(async (user) => {
-//         await bcrypt
-//           .compare(value.password, user.password)
-//           .then((bc) => {
-//             if (bc) {
-//               const payload = {
-//                 user: {
-//                   id: user.id,
-//                 },
-//               };
-//               const authToken = jwt.sign(payload, JWT_SECRET);
-//               res.status(200).send({
-//                 success: "true",
-//                 userauthToken: authToken,
-//                 userId: user.id,
-//               });
-//             } else {
-//               res
-//                 .status(401)
-//                 .send({ success: "false", msg: "Authentification failed" });
-//             }
-//           })
-//           .catch((err) => {
-//             res.status(401).send({ error: err });
-//           });
-//       })
-//       .catch((err) => {
-//         res.status(401).send({ error: err });
-//       });
-//   } catch (error) {
-//     return res.status(500).send({
-//       err: err,
-//     });
 //   }
 // };
 
