@@ -2,6 +2,7 @@ import React, { Component ,useState} from 'react';
 
 import './Reg.css';
 function Op() {
+  const [val,setVal] = useState('New Value');
   const [userD,setData] = useState({
     email:"",name:"",age:"",gender:"",phone:"",pass:""
   })
